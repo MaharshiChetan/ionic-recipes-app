@@ -13,7 +13,13 @@ import { DatabaseOptionsPage } from '../pages/database-options/database-options'
 
 @NgModule({
   declarations: [MyApp, DatabaseOptionsPage],
-  imports: [BrowserModule, HttpModule, IonicModule.forRoot(MyApp)],
+  imports: [
+    BrowserModule,
+    HttpModule,
+    IonicModule.forRoot(MyApp, {
+      mode: 'ios',
+    }),
+  ],
   bootstrap: [IonicApp],
   entryComponents: [MyApp, DatabaseOptionsPage],
   providers: [
